@@ -8,6 +8,10 @@
       "sourceRoot": "src",
       "projectType": "library",
       "architect": {
+        "deploy-ghpages": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {}
+        },
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
@@ -73,7 +77,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "demo/dist",
+            "outputPath": "docs",
             "index": "demo/src/public/index.html",
             "main": "demo/src/main.ts",
             "polyfills": "demo/src/polyfills.ts",

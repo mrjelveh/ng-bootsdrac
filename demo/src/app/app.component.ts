@@ -24,11 +24,11 @@ export class AppComponent implements OnInit {
     route.fragment.pipe(filter(fragment => !!fragment))
         .subscribe(fragment => zone.runOutsideAngular(() => requestAnimationFrame(() => vps.scrollToAnchor(fragment))));
 
-    if (environment.production) {
-      httpClient.get<{downloads: string}>('https://api.npmjs.org/downloads/point/last-month/@ng-bootstrap/ng-bootstrap')
-          .pipe(pluck('downloads'))
-          .subscribe(count => this.downloadCount = count.toLocaleString(), () => of(''));
-    }
+    // if (environment.production) {
+    //   httpClient.get<{downloads: string}>('https://api.npmjs.org/downloads/point/last-month/@ng-bootstrap/ng-bootstrap')
+    //       .pipe(pluck('downloads'))
+    //       .subscribe(count => this.downloadCount = count.toLocaleString(), () => of(''));
+    // }
   }
 
   ngOnInit(): void { this._analytics.trackPageViews(); }
@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
       const style = this.document.createElement('link');
       style.id = 'bootsdrac-theme';
       style.rel = 'stylesheet';
-      style.type = "text/css";
+      style.type = 'text/css';
       style.href = `./${cssLink}`;
 
       head.appendChild(style);
