@@ -126,7 +126,7 @@
     "ng-packagr": "^10.0.0",
     "ngx-build-plus": "^9.0.2",
     "nyc": "14.1.1",
-    "prismjs": "1.16.0",
+    "prismjs": "1.27.0",
     "protractor": "~7.0.0",
     "rimraf": "^3.0.2",
     "rxjs": "~6.5.5",
